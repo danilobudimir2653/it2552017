@@ -1,0 +1,29 @@
+<div class="container">
+  <div id="serchbox">
+  <div class="d-inline">
+   <input id="searchInput" type="text" width="20%" >
+    <button type="button" class="btn btn-primary">Find</button>
+  </div>
+  </div>
+  <div *ngIf="flyghts">
+    <table class="table table-striped">
+      <thead class="thead-dark">
+       <tr>
+        <th scope="col">Mesto Polaska</th>
+         <th scope="col">Mesto Dolaska</th>
+         <th scope="col">Cena</th>
+         <th scope="col">Kupi</th>
+       </tr>
+      </thead>
+      <tbody>
+      <tr *ngFor="let f of flyghts">
+        <td>{{f.mesto_polaska}}</td>
+        <td>{{f.mesto_dolaska}}</td>
+        <td>{{f.cena}}</td>
+        <td><button type="button" class="btn btn-primary" (click)="kupi(f.let_id)">Kupi</button></td>
+      </tr>
+      </tbody>
+    </table>
+  </div>
+
+</div>

@@ -1,0 +1,22 @@
+<div *ngIf="korpa" class="container korpe">
+  <table class="table table-striped">
+    <thead>
+      <tr>
+        <td>Mesto polaska</td>
+        <td>Mesto Dolaska</td>
+        <td>Cena</td>
+        <td>Otkazi</td>
+      </tr>
+    </thead>
+    <tbody *ngFor="let k of korpa">
+    <tr>
+      <td>{{k.mesto_polaska}}</td>
+      <td>{{k.mesto_dolaska}}</td>
+      <td>{{k.cena}}</td>
+      <td><button type="button" class="btn btn-primary" (click)="deleteLet(k.korpa_id)">Otkazi</button></td>
+    </tr>
+
+    </tbody>
+  </table>
+
+</div>

@@ -1,0 +1,68 @@
+html,body{overflow-x: hidden;}
+
+
+
+#headbar {
+    position: relative;
+    top: auto;
+    font-size: 200%;
+    height: 50%;
+    background-color: grey;
+    background-image: url(images/air.jpg);
+    background-size: cover;
+}
+
+#headbar img {
+    width: 100%;
+    height: auto;
+}
+
+#name {
+    color: black;
+    font-weight: bold;
+    font-size: 300%;
+    text-shadow: -1px 0 white, 0 1px white, 1px 0 white, 0 -1px white;
+}
+
+#headbar p{
+    position: relative;
+    top: 37%;
+    left: 10%;
+}
+
+
+
+.card img {
+    width: 100%;
+    margin-bottom: 10px;
+}
+
+#headline {
+    font-size: 150%;
+    color: white;
+}
+
+#roba {
+    font-size: 300%;
+    text-align: center;
+}
+
+#moto {
+    text-shadow: -1px 0 white, 0 1px white, 1px 0 white, 0 -1px white;
+}
+
+.card {
+    text-align: center;
+}
+
+
+#bottom {
+
+
+    height: 50px;
+    color: darkgray;
+    text-align: center;
+    line-height: 50px;
+    margin-top: 5%;
+
+}

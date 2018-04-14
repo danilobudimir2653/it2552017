@@ -1,0 +1,32 @@
+
+<html>
+<head>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.0/jquery.min.js"></script>
+
+    <script>
+        $(document).ready(function(){
+            $.ajax({
+                url: "https://www.weatherbug.com/api/observation?lat=44.82&lng=20.45&providerId=3&stationId=BLGRD&timestamp=1522851853204",
+                type: "GET",
+                success: function(html){
+                    var obj = html;
+                    $("#temperatura_vetra").append("<h1>temperatura vetra: "+obj.Observation.WindChill+" stepena  </h1>");
+                    $("#brzina_vetra").append("<h1>Brzina Vetra: " + obj.Observation.WindSpeed+" km/h </h1>");
+                    $("#temperatura").append("<h1>Temperatura: " + obj.Observation.Temperature+ " stepena </h1>");
+                    $("#temperatura_max").append("<h1>Maksimmalna temperatura: " + obj.HighLow.TemperatureHigh+" stepena</h1>");
+                    $("#temperatura_min").append("<h1>Minimalna temperatura: " + obj.HighLow.TemperatureLow+" stepena</h1>");
+                }
+            });
+        });
+    </script>
+</head>
+<body>
+
+    <div id="temperatura_vetra"></div>
+    <div id="brzina_vetra"></div>
+    <div id="temperatura"></div>
+    <div id="temperatura_max"></div>
+    <div id="temperatura_min"></div>
+
+</body>
+</html>
